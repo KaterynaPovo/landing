@@ -1,0 +1,210 @@
+@import "fonts.scss";
+@import "reset.scss";
+
+$color-white: white;
+$color-red: red;
+$color-blue: rgb(6, 6, 125);
+$color-yellow: rgb(247, 204, 12);
+$color-gray: gray;
+
+* {
+  margin: 0;
+  box-sizing: inherit;
+  &::before {
+    box-sizing: inherit;
+  }
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  font-family: Cambria, sans-serif;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  background: url("../img/bg Image.png") no-repeat center center fixed;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: $color-white;
+  min-height: 100vh;
+}
+
+#main {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 100%;
+  height: 100%;
+  .img-block {
+    align-self: flex-end;
+    #logo {
+      width: 184px;
+      height: 38px;
+      position: absolute;
+      left: 60px;
+      bottom: 33px;
+    }
+    #witcher {
+      height: 100vh;
+      max-width: 100%;
+    }
+  }
+
+  .text-block {
+    align-self: center;
+    .text {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      .number {
+        font-size: 150px;
+      }
+      .welcome {
+        font-size: 41px;
+        font-family: Cambria, serif;
+        margin-bottom: 28px;
+      }
+
+      //copy code button
+      #copy {
+        width: 305px;
+        height: 55px;
+        border: 1px dashed $color-gray;
+        border-radius: 30px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        background: transparent;
+        cursor: pointer;
+        .code {
+          border-right: 1px solid $color-gray;
+          color: $color-red;
+          font-size: 26px;
+          height: 100%;
+          letter-spacing: 2px;
+          padding-top: 10px;
+          padding-right: 20px;
+        }
+        .copy-code {
+          color: $color-white;
+          font-size: 12px;
+          padding-left: 18px;
+          letter-spacing: 0.2em;
+        }
+        &:hover {
+          box-shadow: 0 0 10px 0 $color-yellow inset, 0 0 20px 2px $color-yellow;
+          border: 3px solid $color-yellow;
+        }
+      }
+      .play-btn {
+        width: 234px;
+        height: 50px;
+        color: $color-white;
+        background-color: $color-red;
+        border-radius: 30px;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover {
+          background-color: $color-blue;
+          box-shadow: 0 0 0.4em 0.5em $color-yellow;
+          transition: all 0.3s;
+          font-weight: normal;
+        }
+      }
+    }
+
+    footer {
+      color: $color-gray;
+      font-size: 9px;
+      letter-spacing: 0.8px;
+      right: 50px;
+      position: absolute;
+      bottom: 35px;
+      text-transform: none;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  #main {
+    .img-block {
+      #logo {
+        width: 120px;
+        left: 80px;
+        bottom: 13px;
+      }
+    }
+    .text-block {
+      .text {
+        .number {
+          font-size: 120px;
+        }
+        .title {
+          font-size: 37px;
+        }
+      }
+      footer {
+        bottom: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #main {
+    flex-direction: column-reverse;
+    .img-block {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      #logo {
+        left: 30px;
+        position: absolute;
+      }
+      #witcher {
+        height: auto;
+      }
+    }
+    .text-block {
+      padding: 30px;
+      position: relative;
+      .text {
+        .number {
+          font-size: 80px;
+        }
+        .title {
+          font-size: 17px;
+        }
+        #copy {
+          width: 184px;
+          .code {
+            font-size: 16px;
+            padding-top: 15px;
+            padding-right: 5px;
+          }
+          .copy-code {
+            font-size: 10px;
+            padding-left: 5px;
+            letter-spacing: 0;
+          }
+        }
+        .play-btn {
+          width: 134px;
+        }
+      }
+      footer {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}

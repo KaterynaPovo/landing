@@ -1,0 +1,408 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: Cambriab;
+  font-display: swap;
+  src: url("../fonts/cambriab.woff2") format("woff2"), url("../fonts/cambriab.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Cambriab;
+  font-display: swap;
+  src: url("../fonts/cambriai.woff2") format("woff2"), url("../fonts/cambriai.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Cambriab;
+  font-display: swap;
+  src: url("../fonts/cambriaz.woff2") format("woff2"), url("../fonts/cambriaz.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: Cambria, sans-serif;
+  text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url("../img/bg Image.png") no-repeat center center fixed;
+  width: 100%;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+}
+
+#main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 100%;
+  height: 100%;
+}
+
+#main .img-block {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+#main .img-block #logo {
+  width: 184px;
+  height: 38px;
+  position: absolute;
+  left: 60px;
+  bottom: 33px;
+}
+
+#main .img-block #witcher {
+  height: 100vh;
+  max-width: 100%;
+}
+
+#main .text-block {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#main .text-block .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main .text-block .text .number {
+  font-size: 150px;
+}
+
+#main .text-block .text .welcome {
+  font-size: 41px;
+  font-family: Cambria, serif;
+  margin-bottom: 28px;
+}
+
+#main .text-block .text #copy {
+  width: 305px;
+  height: 55px;
+  border: 1px dashed gray;
+  border-radius: 30px;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+}
+
+#main .text-block .text #copy .code {
+  border-right: 1px solid gray;
+  color: red;
+  font-size: 26px;
+  height: 100%;
+  letter-spacing: 2px;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+#main .text-block .text #copy .copy-code {
+  color: white;
+  font-size: 12px;
+  padding-left: 18px;
+  letter-spacing: 0.2em;
+}
+
+#main .text-block .text #copy:hover {
+  -webkit-box-shadow: 0 0 10px 0 rgb(247, 204, 12) inset, 0 0 20px 2px rgb(247, 204, 12);
+          box-shadow: 0 0 10px 0 rgb(247, 204, 12) inset, 0 0 20px 2px rgb(247, 204, 12);
+  border: 3px solid rgb(247, 204, 12);
+}
+
+#main .text-block .text .play-btn {
+  width: 234px;
+  height: 50px;
+  color: white;
+  background-color: red;
+  border-radius: 30px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#main .text-block .text .play-btn:hover {
+  background-color: rgb(6, 6, 125);
+  -webkit-box-shadow: 0 0 0.4em 0.5em rgb(247, 204, 12);
+          box-shadow: 0 0 0.4em 0.5em rgb(247, 204, 12);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  font-weight: normal;
+}
+
+#main .text-block footer {
+  color: gray;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  right: 50px;
+  position: absolute;
+  bottom: 35px;
+  text-transform: none;
+}
+
+@media (max-width: 1024px) {
+  #main .img-block #logo {
+    width: 120px;
+    left: 80px;
+    bottom: 13px;
+  }
+
+  #main .text-block .text .number {
+    font-size: 120px;
+  }
+
+  #main .text-block .text .title {
+    font-size: 37px;
+  }
+
+  #main .text-block footer {
+    bottom: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  #main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  #main .img-block {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  #main .img-block #logo {
+    left: 30px;
+    position: absolute;
+  }
+
+  #main .img-block #witcher {
+    height: auto;
+  }
+
+  #main .text-block {
+    padding: 30px;
+    position: relative;
+  }
+
+  #main .text-block .text .number {
+    font-size: 80px;
+  }
+
+  #main .text-block .text .title {
+    font-size: 17px;
+  }
+
+  #main .text-block .text #copy {
+    width: 184px;
+  }
+
+  #main .text-block .text #copy .code {
+    font-size: 16px;
+    padding-top: 15px;
+    padding-right: 5px;
+  }
+
+  #main .text-block .text #copy .copy-code {
+    font-size: 10px;
+    padding-left: 5px;
+    letter-spacing: 0;
+  }
+
+  #main .text-block .text .play-btn {
+    width: 134px;
+  }
+
+  #main .text-block footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
